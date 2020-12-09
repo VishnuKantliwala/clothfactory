@@ -19,7 +19,7 @@
                 <div class="col-md-4 offset-md-4">
                     <form class="form-signin" action="dashboard" method="post">
                         <div class="text-center mb-4 ">
-                            <h1 class="h3 mb-3 font-weight-normal">Admin login</h1>
+                            <h1 class="h3 mb-3 font-weight-normal">Admin loginn</h1>
                             <h2 class="h6 mb-3 font-weight-normal">Cloth factory</h2>
                         </div>
 
