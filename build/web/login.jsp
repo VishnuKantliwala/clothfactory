@@ -3,71 +3,107 @@
     Created on : 6 Dec, 2018, 11:21:20 AM
     Author     : ASUS
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <title>Login</title>
-    </head>
-    <body >
-        <div class="container " style="margin-top: 100px">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <form class="form-signin" action="dashboard" method="post">
-                        <div class="text-center mb-4 ">
-                            <h1 class="h3 mb-3 font-weight-normal">Admin loginn</h1>
-                            <h2 class="h6 mb-3 font-weight-normal">Cloth factory</h2>
-                        </div>
+<html lang="en">
 
-                        <div class="form-label-group">
-                            <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-                            <label for="inputEmail"> </label>
-                        </div>
+<head>
+    <meta charset="utf-8" />
+    <title>Master Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-                        <div class="form-label-group">
-                            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                            
-                        </div>
-                        <br/>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                        <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
-                    </form>
-                </div>
-            </div>
 
-        </div>
+    <!-- Notification css (Toastr) -->
+    <link href="assets/libs/toastr/toastr.min.css" rel="stylesheet" type="text/css" />
 
-        <div class="row" style="display: none">
-            <div class="offset-md-4 col-md-4" style="margin-top: 15vh; border-radius: 25px; border: 2px solid;background-color: activecaption;">                                                
-                <form class="form-group " action="dashboard" method="post">
-                    <div class="title form-group">
-                        <br>
-                        <center><b><h1>Login</h1></b></center>
-                    </div>                                                                                               
-                    <div class="form-group">
-                        <label>UserName</label>
-                        <input type="text" name="username" class="form-control" style=" border-radius: 25px; " >
-                    </div> 
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+</head>
 
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password"  name="password" class="form-control" style=" border-radius: 25px; ">
+<body class="authentication-bg">
+
+    <div class="account-pages mt-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="text-center mt-2 mb-4">
+                        <a href="index.php">
+                            <span>
+                                <h2>Cloth Factory</h2>
+                            </span>
+                        </a>
                     </div>
-                    <br>
-                    <center>
-                        <div style="width: 20vh;">
-                            <input type="submit" value="LOGIN" class="form-control btn-danger" style=" border-radius: 25px; ">
-                        </div>
-                    </center>
-                </form>
-            </div>
+                    <div class="card">
 
+                        <div class="card-body p-4">
+                            
+                            <div class="text-center mb-4">
+                                <h4 class="text-uppercase mt-0">Sign In</h4>
+                            </div>
+
+                            <form action="checkLogin"  method="post">
+
+                                <div class="form-group mb-3">
+                                    <label for="emailaddress">Username</label>
+                                    <input class="form-control" type="text" name="username" id="username" required placeholder="username">
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="password">Password</label>
+                                    <input class="form-control" type="password" placeholder="Password" name="password" id="password" required>
+                                </div>
+
+                                <div class="form-group mb-0 text-center">
+                                    <button class="btn btn-primary btn-block" type="submit" name="Submit" id="Submit" > Log In </button>
+                                </div>
+
+                            </form>
+                        </div> <!-- end card-body -->
+                    </div>
+                    <!-- end card -->
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
         </div>
-    </div>       
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <!-- end container -->
+    </div>
+    <!-- end page -->
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Toastr js -->
+    <script src="assets/libs/toastr/toastr.min.js"></script>
+    <script src="assets/js/pages/toastr.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <script>
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        // toastr.error('Looks like username or password is wrong.', 'Opps..!')
+        <? if(isset($error)){ echo $error ;} ?>
+    </script>
+        
 </body>
 </html>

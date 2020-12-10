@@ -6,7 +6,7 @@
     </filter>
     <filter-mapping>
         <filter-name>loginFilter</filter-name>
-        <url-pattern>/dashboard</url-pattern>
+        <url-pattern>/checkLogin</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>addTax</servlet-name>

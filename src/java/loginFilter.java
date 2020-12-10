@@ -10,6 +10,7 @@ import java.sql.*;
 import java.sql.DriverManager;
 import javax.servlet.ServletException;
 import javax.servlet.*;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -49,8 +50,14 @@ public class loginFilter implements Filter{
             }
             if(flag)
             {
-                chain.doFilter(request, response); 
-            }else{
+                HttpServletResponse httpResponse = (HttpServletResponse) response;
+                httpResponse.sendRedirect("index.jsp");
+                
+//                RequestDispatcher rsd = request.getRequestDispatcher("/index.jsp");
+//                rsd.include(request, response);
+//                chain.doFilter(request, response); 
+                
+            }else{  
                 out.println("You have enter a wrong password");
                 RequestDispatcher rsd = request.getRequestDispatcher("login.jsp");
                 rsd.include(request, response);
