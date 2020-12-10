@@ -1,0 +1,8 @@
+.scroller-div {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.logo-lg img {
+    height: 60px !important;
+}
