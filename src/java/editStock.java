@@ -56,15 +56,15 @@ public class editStock extends HttpServlet {
             
             System.out.println(sql);
             statement.execute(sql);
-            out.println("records inserted");
+            response.sendRedirect("stockView.jsp");
 
         } catch (Exception e) {
-            out.println("records not inserted");
+            response.sendRedirect("stockUpdate.jsp?sid="+sid+"&error="+e.getMessage());
             e.printStackTrace();
         }
 
-         RequestDispatcher rs = request.getRequestDispatcher("viewstock.jsp");
-         rs.include(request, response);
+//         RequestDispatcher rs = request.getRequestDispatcher("viewstock.jsp");
+//         rs.include(request, response);
         
         
         

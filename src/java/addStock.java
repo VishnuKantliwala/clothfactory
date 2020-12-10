@@ -52,17 +52,16 @@ public class addStock extends HttpServlet {
                  
             
             stmt.executeUpdate();
-            System.out.println("records inserted");  
+//            System.out.println("records inserted");  
   
             conn.close(); 
-             out.println("records inserted");
+//             out.println("records inserted");
                        
         } catch (Exception e) {
-            out.println("records not inserted");
+            response.sendRedirect("stock.jsp?error="+e.getMessage());
             e.printStackTrace();
         }
         
-         RequestDispatcher rs = request.getRequestDispatcher("addStock.jsp");
-         rs.include(request, response);
+         response.sendRedirect("stockView.jsp");
     }
 }
