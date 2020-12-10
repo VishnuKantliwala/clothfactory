@@ -114,7 +114,7 @@ ResultSet resultSet = null;
                             </li>
 
                             <li>
-                                <a href="viewstock.jsp">
+                                <a href="stockView.jsp">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Stock </span>
                                 </a>

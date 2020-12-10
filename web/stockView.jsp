@@ -8,7 +8,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                        <h4 class="mt-0 header-title">Products View</h4>
+                        <h4 class="mt-0 header-title">Stock View</h4>
+                        <a href="stock.jsp" class="btn btn-success m-b-sm mt-2 mb-2">Add</a>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap">
                             <thead>
                                 <tr>
@@ -62,7 +63,7 @@
                                     <td><%=resultSet.getString("purchase_price") %></td>
                                     <td><%=resultSet.getString("quantity") %></td>
                                     <td>   
-                                        <a href="editStock.jsp?sid=<%=resultSet.getString("sid") %>"  > <i class="fa fa-edit"></i> </a>
+                                        <a href="stockUpdate.jsp?sid=<%=resultSet.getString("sid") %>"  > <i class="fa fa-edit"></i> </a>
                                     </td>
                                 </tr>
                                 <%
