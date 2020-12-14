@@ -116,14 +116,14 @@ ResultSet resultSet = null;
                             <li>
                                 <a href="stockView.jsp">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Stock </span>
+                                    <span> Stocks </span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="documentView.php">
+                                <a href="vendorView.jsp">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Documents </span>
+                                    <span> Vendors </span>
                                 </a>
                             </li>
 

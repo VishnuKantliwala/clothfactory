@@ -57,10 +57,9 @@ public class loginFilter implements Filter{
 //                rsd.include(request, response);
 //                chain.doFilter(request, response); 
                 
-            }else{  
-                out.println("You have enter a wrong password");
-                RequestDispatcher rsd = request.getRequestDispatcher("login.jsp");
-                rsd.include(request, response);
+            }else{
+                HttpServletResponse httpResponse = (HttpServletResponse) response;
+                httpResponse.sendRedirect("login.jsp?error=You have enter a wrong password");
             }
             conn.close();                                    
         } catch (Exception e) {

@@ -81,9 +81,9 @@ public class AddVendor extends HttpServlet {
             html+="</script>";
            
 //            insertcustomerstmt.close();
-
-            RequestDispatcher rs = request.getRequestDispatcher("addvendor.jsp");
-            rs.include(request, response);
+            HttpServletResponse httpResponse = (HttpServletResponse) response;
+            httpResponse.sendRedirect("vendorView.jsp");
+            
 
         }
        catch(SQLException | ClassNotFoundException ex)

@@ -43,6 +43,18 @@
                             
                             <div class="text-center mb-4">
                                 <h4 class="text-uppercase mt-0">Sign In</h4>
+                                <p class="text text-danger">
+                                        <%
+                                            if( request.getParameter("error") != null )
+                                            {
+                                        %>
+                                        <%= request.getParameter("error") %>
+                                        <%
+                                            }
+                                                
+                                        %>
+                                        
+                                    </p>
                             </div>
 
                             <form action="checkLogin"  method="post">

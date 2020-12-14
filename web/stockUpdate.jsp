@@ -44,7 +44,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Product Name</label>
                                         <div class="col-md-12">
-                                            <input type="hidden"  name="sid" class="form-control" value=<%=sid%>>
+                                            <input type="hidden"  name="sid" class="form-control" value=<%=sid%> />
                                             <input class="form-control" name="productName" autofocus="" value="<%=resultSet.getString("itemname")%>" />
                                         </div>
 
