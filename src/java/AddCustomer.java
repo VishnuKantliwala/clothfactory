@@ -21,24 +21,21 @@ public class AddCustomer extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request,HttpServletResponse response)
             throws ServletException,IOException {
-
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
-        Connection conn = null;
-        PreparedStatement insertcustomerstmt = null;
-        ResultSet resultSet = null;
-        String html="<script>";
-
-        try
-        {
+            PrintWriter out = response.getWriter();        
+         
+         
+         System.out.println(request.toString());
+        try {
+            Connection conn = null;
+            PreparedStatement insertcustomerstmt = null;
+            ResultSet resultSet = null;
             
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             String mysqlConnUrl = "jdbc:mysql://localhost:3306/apparel";
             String mysqlUserName = "root";
             String mysqlPassword = "";
-            conn = DriverManager.getConnection(mysqlConnUrl,mysqlUserName ,mysqlPassword);
-         
+            conn = DriverManager.getConnection(mysqlConnUrl, mysqlUserName , mysqlPassword);
+                        
             System.out.println("contact 2"+request.getParameter("txtCustomerCnt2"));
             String sql = "INSERT INTO customer(cid,fname,lname,contact1,contact2,email,address1,address2,city,state,pincode,country) VALUES(null,?,?,?,?,?,?,?,?,?,?,?)";
             insertcustomerstmt = conn.prepareStatement(sql);
@@ -55,21 +52,17 @@ public class AddCustomer extends HttpServlet {
             insertcustomerstmt.setString(11,request.getParameter("txtCustomerCountry"));
    
             insertcustomerstmt.executeUpdate();
-               html+="alert('Customer Saved')";
-            html+="</script>";
-      //      insertcustomerstmt.close();
-
+//            System.out.println("records inserted");  
+  
+            conn.close(); 
+//             out.println("records inserted");
+                       
+        } catch (Exception e) {
+            response.sendRedirect("customer.jsp?error="+e.getMessage());
+            e.printStackTrace();
         }
-       catch(SQLException | ClassNotFoundException ex)
-        {
-                 html+="alert('Error occured')";
-            html+="</script>";
-            System.out.println(ex);
-
-        }
-         out.println(html);
-          RequestDispatcher rs = request.getRequestDispatcher("addcustomer.jsp");
-            rs.include(request, response);
-   }
+        
+         response.sendRedirect("customerView.jsp");
+    }
 
 }

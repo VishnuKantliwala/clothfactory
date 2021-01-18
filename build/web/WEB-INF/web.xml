@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    
     <filter>
         <filter-name>loginFilter</filter-name>
         <filter-class>loginFilter</filter-class>
@@ -8,6 +10,7 @@
         <filter-name>loginFilter</filter-name>
         <url-pattern>/checkLogin</url-pattern>
     </filter-mapping>
+    
     <servlet>
         <servlet-name>addTax</servlet-name>
         <servlet-class>addTax</servlet-class>
@@ -36,6 +39,14 @@
         <servlet-name>editStock</servlet-name>
         <servlet-class>editStock</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>fetchVendor</servlet-name>
+        <servlet-class>fetchVendor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fetchVendor</servlet-name>
+        <url-pattern>/fetchvendor</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>addTax</servlet-name>
         <url-pattern>/addTax</url-pattern>
