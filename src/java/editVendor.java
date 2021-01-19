@@ -57,7 +57,7 @@ public class editVendor extends HttpServlet {
             String cst=request.getParameter("cst");
             String cstdate=request.getParameter("cstdate");
              
-            String sql ="update stock set fname='"+ fname + "',lname='"+ lname + "',contact1='"+contact1+"',contact2='"+contact2 + "',email='"+email+"',website='"+website +"',address1='"+address1+"',address2='"+address2+"',city='"+city+ "',state='"+state+"',pincode="+pincode+", country='"+country+"', gst='"+gst+"',gstdate='"+gstdate+"',cst='"+cst+"',cstdate='"+cstdate+"' where vid="+vid;                        
+            String sql ="update vendor set fname='"+ fname + "',lname='"+ lname + "',contact1='"+contact1+"',contact2='"+contact2 + "',email='"+email+"',website='"+website +"',address1='"+address1+"',address2='"+address2+"',city='"+city+ "',state='"+state+"',pincode="+pincode+", country='"+country+"', gst='"+gst+"',gstdate='"+gstdate+"',cst='"+cst+"',cstdate='"+cstdate+"' where vid="+vid;                        
             
             System.out.println(sql);
             statement.execute(sql);
