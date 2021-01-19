@@ -40,6 +40,14 @@
         <servlet-class>editStock</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>editVendor</servlet-name>
+        <servlet-class>editVendor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editVendor</servlet-name>
+        <url-pattern>/editvendor</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>fetchVendor</servlet-name>
         <servlet-class>fetchVendor</servlet-class>
     </servlet>

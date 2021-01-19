@@ -23,7 +23,7 @@ public class editVendor extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        PrintWriter out = response.getWriter();        
-        String sid = request.getParameter("sid");
+        String vid = request.getParameter("vid");
         String driverName = "com.mysql.cj.jdbc.Driver";
         String connectionUrl = "jdbc:mysql://localhost:3306/";
         String dbName = "apparel";
@@ -55,20 +55,16 @@ public class editVendor extends HttpServlet {
             String gst=request.getParameter("gst");
             String gstdate=request.getParameter("gstdate");
             String cst=request.getParameter("cst");
-             String cstdate=request.getParameter("cstdate");
-            
-            double sales_price=Double.parseDouble(request.getParameter("salesPrice")); // change decimal to double
-            double purchase_price=Double.parseDouble(request.getParameter("purchasePrice")); // change decimal to double
-            int quantity =Integer.parseInt(request.getParameter("stock_qty"));
+            String cstdate=request.getParameter("cstdate");
              
-            String sql ="update stock set itemname='"+ itemname + "',itembrand='"+ itembrand + "',itemcode='"+itemcode+"',segment='"+segment + "',email='"+email+"',website='"+website +"',address1='"+address1+"',barcode='"+barcode+"',sales_price="+sales_price+ ",purchase_price="+purchase_price+",quantity="+quantity+" where sid="+sid;                        
+            String sql ="update stock set fname='"+ fname + "',lname='"+ lname + "',contact1='"+contact1+"',contact2='"+contact2 + "',email='"+email+"',website='"+website +"',address1='"+address1+"',address2='"+address2+"',city='"+city+ "',state='"+state+"',pincode="+pincode+", country='"+country+"', gst='"+gst+"',gstdate='"+gstdate+"',cst='"+cst+"',cstdate='"+cstdate+"' where vid="+vid;                        
             
             System.out.println(sql);
             statement.execute(sql);
-            response.sendRedirect("stockView.jsp");
+            response.sendRedirect("vendorView.jsp");
 
         } catch (Exception e) {
-            response.sendRedirect("stockUpdate.jsp?sid="+sid+"&error="+e.getMessage());
+            response.sendRedirect("vendorUpdate.jsp?vid="+vid+"&error="+e.getMessage());
             e.printStackTrace();
         }
 

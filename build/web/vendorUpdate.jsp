@@ -25,7 +25,7 @@
                                 while (resultSet.next()) {
                         %>
 
-                        <form class="form-horizontal" method="post" action="editVendor">
+                        <form class="form-horizontal" method="post" action="editvendor">
                             <div class="row">
                                 
                                 <div class="col-md-12">
