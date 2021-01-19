@@ -10,6 +10,7 @@ import java.sql.*;
 import java.sql.DriverManager;
 import javax.servlet.ServletException;
 import javax.servlet.*;
+import javax.servlet.http.*;
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -50,6 +51,9 @@ public class loginFilter implements Filter{
             }
             if(flag)
             {
+                HttpServletRequest httpreq = (HttpServletRequest) request;
+                HttpSession session=httpreq.getSession();  
+                session.setAttribute("username",user); 
                 HttpServletResponse httpResponse = (HttpServletResponse) response;
                 httpResponse.sendRedirect("index.jsp");
                 

@@ -17,13 +17,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ASUS
  */
-public class editStock extends HttpServlet {
+public class editCustomer extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        PrintWriter out = response.getWriter();        
-        String sid = request.getParameter("sid");
+        String cid = request.getParameter("cid");
         String driverName = "com.mysql.cj.jdbc.Driver";
         String connectionUrl = "jdbc:mysql://localhost:3306/";
         String dbName = "apparel";
@@ -40,27 +40,26 @@ public class editStock extends HttpServlet {
             System.out.println(request.toString());
             connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
             statement=connection.createStatement();
-            String itemname=request.getParameter("productName");
-            String itembrand= request.getParameter("productBrand");
-            String itemcode=request.getParameter("productcode");
-            String segment=request.getParameter("stockSegment");
-            String style_fit=request.getParameter("styleFit");
-            String color=request.getParameter("color");
-            String size=request.getParameter("stockSize");
-            String barcode=request.getParameter("stockCode");
-            double sales_price=Double.parseDouble(request.getParameter("salesPrice")); // change decimal to double
-            double purchase_price=Double.parseDouble(request.getParameter("purchasePrice")); // change decimal to double
-            int quantity =Integer.parseInt(request.getParameter("stock_qty"));
-            int vid =Integer.parseInt(request.getParameter("vid"));
+            String fname=request.getParameter("fname");
+            String lname= request.getParameter("lname");
+            String contact1=request.getParameter("contact1");
+            String contact2=request.getParameter("contact2");
+            String email=request.getParameter("email");
+            String address1=request.getParameter("address1");
+            String address2=request.getParameter("address2");
+            String city=request.getParameter("city");
+            String state=request.getParameter("state");
+            int pincode =Integer.parseInt(request.getParameter("pincode"));
+            String country=request.getParameter("country");
              
-            String sql ="update stock set itemname='"+ itemname + "',vid="+vid+", itembrand='"+ itembrand + "',itemcode='"+itemcode+"',segment='"+segment + "',style_fit='"+style_fit+"',color='"+color +"',size='"+size+"',barcode='"+barcode+"',sales_price="+sales_price+ ",purchase_price="+purchase_price+",quantity="+quantity+" where sid="+sid;                        
+            String sql ="update customer set fname='"+ fname + "',lname='"+ lname + "',contact1='"+contact1+"',contact2='"+contact2 + "',email='"+email+"',address1='"+address1+"',address2='"+address2+"',city='"+city+ "',state='"+state+"',pincode="+pincode+", country='"+country+"' where cid="+cid;                        
             
             System.out.println(sql);
             statement.execute(sql);
-            response.sendRedirect("stockView.jsp");
+            response.sendRedirect("customerView.jsp");
 
         } catch (Exception e) {
-            response.sendRedirect("stockUpdate.jsp?sid="+sid+"&error="+e.getMessage());
+            response.sendRedirect("customerView.jsp?cid="+cid+"&error="+e.getMessage());
             e.printStackTrace();
         }
 

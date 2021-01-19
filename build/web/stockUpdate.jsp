@@ -17,7 +17,7 @@
                             try {
                                 connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
                                 statement = connection.createStatement();
-                                String sql = "SELECT * FROM stock where sid=" + sid;
+                                String sql = "SELECT * FROM stock s, vendor v where s.vid = v.vid and sid=" + sid;
 
                                 resultSet = statement.executeQuery(sql);
                                 while (resultSet.next()) {
@@ -45,7 +45,7 @@
                                         <label for="inputEmail3" class="col-md-12 control-label">Product Name</label>
                                         <div class="col-md-12">
                                             <input type="hidden"  name="sid" class="form-control" value=<%=sid%> />
-                                            <input class="form-control" name="productName" autofocus="" value="<%=resultSet.getString("itemname")%>" />
+                                            <input class="form-control" name="productName" autofocus="" value="<%=resultSet.getString("itemname")%>" required />
                                         </div>
 
                                     </div>
@@ -53,7 +53,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Product Brand</label>
                                         <div class="col-md-12">
-                                            <input class="form-control" name="productBrand" value=<%=resultSet.getString("itembrand")%> />
+                                            <input class="form-control" name="productBrand" value=<%=resultSet.getString("itembrand")%> required />
                                         </div>
 
                                     </div>
@@ -61,7 +61,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Product Code</label>
                                         <div class="col-md-12">
-                                            <input class="form-control" name="productcode" value=<%=resultSet.getString("itemcode")%> />
+                                            <input class="form-control" name="productcode" value=<%=resultSet.getString("itemcode")%> required />
                                         </div>
 
                                     </div>
@@ -69,7 +69,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Purchase Price</label>
                                         <div class="col-md-12">
-                                            <input class="form-control" id="pprice" name="purchasePrice" onkeyup="cal_sales()" value=<%=resultSet.getString("purchase_price")%> />
+                                            <input class="form-control" id="pprice" name="purchasePrice" onkeyup="cal_sales()" value=<%=resultSet.getString("purchase_price")%> required />
                                         </div>
 
                                     </div>
@@ -77,7 +77,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Margin</label>
                                         <div class="col-md-12">
-                                            <input type="text" id="margin" name="margin" class="form-control" value=0 onkeyup="cal_sales()"  />
+                                            <input type="text" id="margin" name="margin" class="form-control" value=0 onkeyup="cal_sales()" required />
                                         </div>
 
                                     </div>
@@ -85,7 +85,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Sales Price</label>
                                         <div class="col-md-12">
-                                            <input type="number" id="sprice" name="salesPrice" class="form-control" value=<%=resultSet.getString("sales_price")%>>
+                                            <input type="number" id="sprice" name="salesPrice" class="form-control" value=<%=resultSet.getString("sales_price")%> required />
                                         </div>
 
                                     </div>
@@ -94,7 +94,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Barcode</label>
                                         <div class="col-md-12">
-                                            <input type="number"  name="stockCode" class="form-control" value=<%=resultSet.getString("barcode")%>>
+                                            <input type="number"  name="stockCode" class="form-control" value=<%=resultSet.getString("barcode")%> required>
                                         </div>
 
                                     </div>
@@ -102,42 +102,53 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Color</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="color" class="form-control" value=<%=resultSet.getString("color")%>>
+                                            <input type="text" name="color" class="form-control" value=<%=resultSet.getString("color")%> required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Stock Size</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="stockSize" class="form-control" value=<%=resultSet.getString("size")%>>
+                                            <input type="text" name="stockSize" class="form-control" value=<%=resultSet.getString("size")%> required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Style Fit</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="styleFit" class="form-control" value=<%=resultSet.getString("style_fit")%> >
+                                            <input type="text" name="styleFit" class="form-control" value=<%=resultSet.getString("style_fit")%> required >
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Stock Segment</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="stockSegment" class="form-control" value=<%=resultSet.getString("segment")%> >
+                                            <input type="text" name="stockSegment" class="form-control" value=<%=resultSet.getString("segment")%> required >
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Stock Quantity</label>
                                         <div class="col-md-12">
-                                            <input type="number" name="stock_qty" class="form-control" value=<%=resultSet.getString("quantity")%>>
+                                            <input type="number" name="stock_qty" class="form-control" value=<%=resultSet.getString("quantity")%> required >
                                         </div>
                                     </div>
 
                                 </div>
-
+                                <div class="col-md-12">
+                                   <div class="form-group">
+                                        <label for="inputEmail3" class="col-md-12 control-label">Vendor</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="txtvendor" id="txtvendor" value=<%=resultSet.getString("fname")%> class="form-control" placeholder="Name" required>
+                                             <div id="suggesstion-box"></div>
+                                             <input type="hidden" name="vid" id="vid" value=<%=resultSet.getString("fname")%>>
+                                        </div>
+                                    </div>         
+                                </div>
+                                    
                             </div>
-
+                            
+                            
 
 
 

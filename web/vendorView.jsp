@@ -13,8 +13,8 @@
                         <table id="datatable" class="table table-bordered dt-responsive nowrap">
                             <thead>
                                 <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>   
+                                    <th>Company Name</th>
+                                    <th>Owner Name</th>   
                                     <th>Contact 1</th>
                                     <th>Contact 2</th>
                                     <th>Email</th>
@@ -25,11 +25,9 @@
                                     <th>State</th>
                                     <th>Pincode</th>
                                     <th>Country</th>
-                                    <th>gst</th>
-                                    <th>gstdate</th>
-                                    <th>cst</th>
-                                    <th>cstdate</th>
+                                    <th>GST Number</th>
                                     <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -46,11 +44,9 @@
                                     <th>State</th>
                                     <th>Pincode</th>
                                     <th>Country</th>
-                                    <th>gst</th>
-                                    <th>gstdate</th>
-                                    <th>cst</th>
-                                    <th>cstdate</th>
+                                    <th>GST Number</th>
                                     <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -77,11 +73,11 @@
                                     <td><%=resultSet.getString("country") %></td>
                                     <td><%=resultSet.getString("pincode") %></td>
                                     <td><%=resultSet.getString("gst") %></td>
-                                    <td><%=resultSet.getString("gstdate") %></td>
-                                    <td><%=resultSet.getString("cst") %></td>
-                                    <td><%=resultSet.getString("cstdate") %></td>
                                     <td>
                                         <a href="vendorUpdate.jsp?vid=<%=resultSet.getString("vid") %>"  > <i class="fa fa-edit"></i> </a>
+                                    </td>
+                                    <td>
+                                        <a href="deletevendor?vid=<%=resultSet.getString("vid") %>"  > <i class="fa fa-trash"></i> </a>
                                     </td>
                                 </tr>
                                 <%

@@ -34,7 +34,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Company Name</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control" name="fname" autofocus=""/>
+                                        <input type="text" class="form-control" name="fname" autofocus="" required=""/>
                                     </div>
 
                                 </div>
@@ -42,7 +42,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Owner Name</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control" name="lname"/>
+                                        <input type="text" class="form-control" name="lname" required=""/>
                                     </div>
 
                                 </div>
@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Contact 1</label>
                                     <div class="col-md-12">
-                                        <input type="number" class="form-control" name="contact1"/>
+                                        <input type="number" class="form-control" name="contact1" required=""/>
                                     </div>
 
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Contact 2</label>
                                     <div class="col-md-12">
-                                        <input type="number" class="form-control" name="contact2" />
+                                        <input type="number" class="form-control" name="contact2" required="" />
                                     </div>
 
                                 </div>
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Email</label>
                                     <div class="col-md-12">
-                                        <input type="email" name="email" class="form-control" >
+                                        <input type="email" name="email" class="form-control" required="">
                                     </div>
 
                                 </div>
@@ -74,7 +74,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Website</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="website" class="form-control">
+                                        <input type="text" name="website" class="form-control" required="">
                                     </div>
 
                                 </div>
@@ -82,7 +82,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Address 1</label>
                                     <div class="col-md-12">
-                                        <input type="text"  name="address1" class="form-control">
+                                        <input type="text"  name="address1" class="form-control" required="">
                                     </div>
 
                                 </div>
@@ -90,7 +90,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Address 2</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="address2" class="form-control">
+                                        <input type="text" name="address2" class="form-control" required="">
                                     </div>
                                 </div>
 
@@ -102,56 +102,56 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">City</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="city" class="form-control">
+                                        <input type="text" name="city" class="form-control" required="">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">State</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="state" class="form-control">
+                                        <input type="text" name="state" class="form-control" required="">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Pincode</label>
                                     <div class="col-md-12">
-                                        <input type="number" name="pincode" class="form-control">
+                                        <input type="number" name="pincode" class="form-control" required="" >
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Country</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="country" class="form-control">
+                                        <input type="text" name="country" class="form-control" required="">
                                     </div>
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-md-12 control-label">GST</label>
+                                    <label for="inputEmail3" class="col-md-12 control-label">GST Number</label>
                                     <div class="col-md-12">
-                                        <input type="number" name="gst" class="form-control">
+                                        <input type="number" name="gst" class="form-control" required="">
                                     </div>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group" style="display:none">
                                     <label for="inputEmail3" class="col-md-12 control-label">GST Date</label>
                                     <div class="col-md-12">
-                                        <input type="date" name="gstdate" class="form-control">
+                                        <input type="text" name="gstdate" value="lol" class="form-control" required="">
                                     </div>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group" style="display:none">
                                     <label for="inputEmail3" class="col-md-12 control-label">CST</label>
                                     <div class="col-md-12">
-                                        <input type="number" name="cst" class="form-control">
+                                        <input type="number" value="0" name="cst" class="form-control">
                                     </div>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group" style="display:none">
                                     <label for="inputEmail3" class="col-md-12 control-label">CST Date</label>
                                     <div class="col-md-12">
-                                        <input type="date" name="cstdate" class="form-control">
+                                        <input type="text" value="test" name="cstdate" class="form-control">
                                     </div>
                                 </div>
 

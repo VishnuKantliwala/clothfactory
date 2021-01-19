@@ -48,6 +48,46 @@
         <url-pattern>/editvendor</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>editCustomer</servlet-name>
+        <servlet-class>editCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editCustomer</servlet-name>
+        <url-pattern>/editcustomer</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteCustomer</servlet-name>
+        <servlet-class>deleteCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteCustomer</servlet-name>
+        <url-pattern>/deletecustomer</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteVendor</servlet-name>
+        <servlet-class>deleteVendor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteVendor</servlet-name>
+        <url-pattern>/deletevendor</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteStock</servlet-name>
+        <servlet-class>deleteStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteStock</servlet-name>
+        <url-pattern>/deletestock</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>fetchVendor</servlet-name>
         <servlet-class>fetchVendor</servlet-class>
     </servlet>

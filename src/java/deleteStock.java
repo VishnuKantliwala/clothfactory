@@ -17,10 +17,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ASUS
  */
-public class editStock extends HttpServlet {
+public class deleteStock extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        PrintWriter out = response.getWriter();        
         String sid = request.getParameter("sid");
@@ -40,27 +40,15 @@ public class editStock extends HttpServlet {
             System.out.println(request.toString());
             connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
             statement=connection.createStatement();
-            String itemname=request.getParameter("productName");
-            String itembrand= request.getParameter("productBrand");
-            String itemcode=request.getParameter("productcode");
-            String segment=request.getParameter("stockSegment");
-            String style_fit=request.getParameter("styleFit");
-            String color=request.getParameter("color");
-            String size=request.getParameter("stockSize");
-            String barcode=request.getParameter("stockCode");
-            double sales_price=Double.parseDouble(request.getParameter("salesPrice")); // change decimal to double
-            double purchase_price=Double.parseDouble(request.getParameter("purchasePrice")); // change decimal to double
-            int quantity =Integer.parseInt(request.getParameter("stock_qty"));
-            int vid =Integer.parseInt(request.getParameter("vid"));
              
-            String sql ="update stock set itemname='"+ itemname + "',vid="+vid+", itembrand='"+ itembrand + "',itemcode='"+itemcode+"',segment='"+segment + "',style_fit='"+style_fit+"',color='"+color +"',size='"+size+"',barcode='"+barcode+"',sales_price="+sales_price+ ",purchase_price="+purchase_price+",quantity="+quantity+" where sid="+sid;                        
+            String sql ="delete from stock where sid="+sid;                        
             
             System.out.println(sql);
             statement.execute(sql);
             response.sendRedirect("stockView.jsp");
 
         } catch (Exception e) {
-            response.sendRedirect("stockUpdate.jsp?sid="+sid+"&error="+e.getMessage());
+            response.sendRedirect("stockView.jsp&error="+e.getMessage());
             e.printStackTrace();
         }
 

@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                        <h4 class="mt-0 header-title">Vendor View</h4>
+                        <h4 class="mt-0 header-title">Customer View</h4>
                         <a href="customer.jsp" class="btn btn-success m-b-sm mt-2 mb-2">Add</a>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap">
                             <thead>
@@ -26,6 +26,7 @@
                                     <th>Pincode</th>
                                     <th>Country</th>
                                     <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -43,6 +44,7 @@
                                     <th>Pincode</th>
                                     <th>Country</th>
                                     <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -70,6 +72,9 @@
                                     <td><%=resultSet.getString("country") %></td>
                                     <td>
                                         <a href="customerUpdate.jsp?cid=<%=resultSet.getString("cid") %>"  > <i class="fa fa-edit"></i> </a>
+                                    </td>
+                                    <td>
+                                        <a href="deletecustomer?cid=<%=resultSet.getString("cid") %>"  > <i class="fa fa-trash"></i> </a>
                                     </td>
                                 </tr>
                                 <%

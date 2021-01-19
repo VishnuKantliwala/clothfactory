@@ -23,7 +23,9 @@
                                     <th>Sails Price</th>
                                     <th>Purchase Price</th>
                                     <th>Quantity</th>
+                                    <th>Vendor</th>
                                     <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -38,7 +40,9 @@
                                     <th>Sails Price</th>
                                     <th>Purchase Price</th>
                                     <th>Quantity</th>
+                                    <th>Vendor</th>
                                     <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -46,7 +50,7 @@
                                 try{ 
                                 connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
                                 statement=connection.createStatement();
-                                String sql ="SELECT * FROM stock";
+                                String sql ="SELECT * FROM stock s, vendor v where s.vid = v.vid";
 
                                 resultSet = statement.executeQuery(sql);
                                 while(resultSet.next()){
@@ -62,8 +66,12 @@
                                     <td><%=resultSet.getString("sales_price") %></td>
                                     <td><%=resultSet.getString("purchase_price") %></td>
                                     <td><%=resultSet.getString("quantity") %></td>
+                                    <td><%=resultSet.getString("fname") %></td>
                                     <td>   
                                         <a href="stockUpdate.jsp?sid=<%=resultSet.getString("sid") %>"  > <i class="fa fa-edit"></i> </a>
+                                    </td>
+                                    <td>   
+                                        <a href="deletestock?sid=<%=resultSet.getString("sid") %>"  > <i class="fa fa-trash"></i> </a>
                                     </td>
                                 </tr>
                                 <%

@@ -5,6 +5,13 @@
 <%@page import="java.sql.Connection"%>
 
 <%
+   session=request.getSession(false);
+   
+   
+   if(session == null){
+       response.sendRedirect("login.jsp");
+   }
+    
 String id = request.getParameter("fname");
 String driverName = "com.mysql.cj.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
@@ -100,7 +107,6 @@ ResultSet resultSet = null;
             <!-- end Topbar -->
 
             <!-- ========== Left Sidebar Start ========== -->
-            <? global $pageID; ?>
             <div class="left-side-menu">
 
                 <div class="slimscroll-menu">
@@ -111,7 +117,7 @@ ResultSet resultSet = null;
 
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <a href="login.jsp" class="text-custom">
+                                <a href="logout" class="text-custom">
                                     <i class="mdi mdi-power text-danger"></i>
                                 </a>
                             </li>

@@ -34,7 +34,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Product Name</label>
                                     <div class="col-md-12">
-                                        <input class="form-control" name="productName" autofocus=""/>
+                                        <input class="form-control" name="productName" autofocus="" required=""/>
                                     </div>
 
                                 </div>
@@ -42,7 +42,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Product Brand</label>
                                     <div class="col-md-12">
-                                        <input class="form-control" name="productBrand"/>
+                                        <input class="form-control" name="productBrand" required=""/>
                                     </div>
 
                                 </div>
@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Product Code</label>
                                     <div class="col-md-12">
-                                        <input class="form-control" name="productcode"/>
+                                        <input class="form-control" name="productcode" required=""/>
                                     </div>
 
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Purchase Price</label>
                                     <div class="col-md-12">
-                                        <input class="form-control" id="pprice" name="purchasePrice" onkeyup="cal_sales()"/>
+                                        <input class="form-control" id="pprice" name="purchasePrice" onkeyup="cal_sales()" required=""/>
                                     </div>
 
                                 </div>
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Margin</label>
                                     <div class="col-md-12">
-                                        <input type="text" id="margin" name="margin" class="form-control" onkeyup="cal_sales()">
+                                        <input type="text" id="margin" name="margin" class="form-control" onkeyup="cal_sales()" required="">
                                     </div>
 
                                 </div>
@@ -74,7 +74,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Sales Price</label>
                                     <div class="col-md-12">
-                                        <input type="number" id="sprice" name="salesPrice" class="form-control">
+                                        <input type="number" id="sprice" name="salesPrice" class="form-control" required="">
                                     </div>
 
                                 </div>
@@ -83,7 +83,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Barcode</label>
                                     <div class="col-md-12">
-                                        <input type="number"  name="stockCode" class="form-control">
+                                        <input type="number"  name="stockCode" class="form-control" required="">
                                     </div>
 
                                 </div>
@@ -91,35 +91,35 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Color</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="color" class="form-control">
+                                        <input type="text" name="color" class="form-control" required="">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Stock Size</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="stockSize" class="form-control">
+                                        <input type="text" name="stockSize" class="form-control" required="">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Style Fit</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="styleFit" class="form-control">
+                                        <input type="text" name="styleFit" class="form-control" required="">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Stock Segment</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="stockSegment" class="form-control">
+                                        <input type="text" name="stockSegment" class="form-control" required="">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Stock Quantity</label>
                                     <div class="col-md-12">
-                                        <input type="number" name="stock_qty" class="form-control">
+                                        <input type="number" name="stock_qty" class="form-control" required="">
                                     </div>
                                 </div>
 
@@ -129,7 +129,7 @@
                                    <div class="form-group">
                                     <label for="inputEmail3" class="col-md-12 control-label">Vendor</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="txtvendor" id="txtvendor" class="form-control" placeholder="Name">
+                                        <input type="text" name="txtvendor" id="txtvendor" class="form-control" required="" placeholder="Name">
                                          <div id="suggesstion-box"></div>
                                          <input type="hidden" name="vid" id="vid" value="0">
                                     </div>

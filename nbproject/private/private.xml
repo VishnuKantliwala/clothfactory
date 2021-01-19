@@ -2,6 +2,25 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/src/java/deleteVendor.java</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/header.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/customerUpdate.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/src/java/editStock.java</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/vendorUpdate.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/customerView.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/login.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/stock.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/vendorView.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/stockView.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/vendor.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/customer.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/web/stockUpdate.jsp</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/src/java/deleteStock.java</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/src/java/loginFilter.java</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/src/java/AddVendor.java</file>
+            <file>file:/C:/Users/LEANCER/Documents/NetBeansProjects/clothfactory2/src/java/logout.java</file>
+        </group>
     </open-files>
 </project-private>

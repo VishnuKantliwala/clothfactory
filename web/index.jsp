@@ -26,6 +26,7 @@
                                             <ul>
                                                 <li>You can manage(add,delete or edit) any Products .</li>
                                                 <li>You can manage(add,delete or edit) any Vendors.</li>
+                                                <li>You can manage(add,delete or edit) any Customers.</li>
 
                                                 
                                             </ul>

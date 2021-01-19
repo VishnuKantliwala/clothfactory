@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-box">
-                        <h4 class="mt-0 header-title">Stock form</h4>
+                        <h4 class="mt-0 header-title">Customer form</h4>
                         <hr/>
                         <%
                             try {
@@ -22,7 +22,7 @@
                                 resultSet = statement.executeQuery(sql);
                                 while (resultSet.next()) {
                         %>
-                        <form class="form-horizontal" method="post" action="editCustomer">
+                        <form class="form-horizontal" method="post" action="editcustomer">
                             <div class="row">
 
                                 <div class="col-md-12">
@@ -45,7 +45,7 @@
                                         <label for="inputEmail3" class="col-md-12 control-label">First Name</label>
                                         <div class="col-md-12">
                                             <input type="hidden"  name="cid" class="form-control" value=<%=cid%> />
-                                            <input class="form-control" name="fname" autofocus="" value="<%=resultSet.getString("fname")%>" />
+                                            <input class="form-control" name="fname" autofocus="" value="<%=resultSet.getString("fname")%>" required=""/>
                                         </div>
 
                                     </div>
@@ -53,7 +53,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">last name</label>
                                         <div class="col-md-12">
-                                            <input class="form-control" name="lname" value=<%=resultSet.getString("lname")%> />
+                                            <input class="form-control" name="lname" value=<%=resultSet.getString("lname")%> required />
                                         </div>
 
                                     </div>
@@ -61,7 +61,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Contact no 1</label>
                                         <div class="col-md-12">
-                                            <input class="form-control" name="contact1" value=<%=resultSet.getString("contact1")%> />
+                                            <input class="form-control" name="contact1" value=<%=resultSet.getString("contact1")%> required />
                                         </div>
 
                                     </div>
@@ -69,7 +69,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">Contact no 2 </label>
                                         <div class="col-md-12">
-                                            <input class="form-control"  name="contact2" value=<%=resultSet.getString("contact2")%> />
+                                            <input class="form-control"  name="contact2" value=<%=resultSet.getString("contact2")%> required/>
                                         </div>
 
                                     </div>
@@ -77,7 +77,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">email</label>
                                         <div class="col-md-12">
-                                            <input type="email" name="email" class="form-control" value=<%=resultSet.getString("email")%> />
+                                            <input type="email" name="email" class="form-control" value=<%=resultSet.getString("email")%> required/>
                                         </div>
 
                                     </div>
@@ -85,7 +85,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">address1</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="address1" class="form-control" value=<%=resultSet.getString("address1")%>>
+                                            <input type="text" name="address1" class="form-control" value=<%=resultSet.getString("address1")%> required/>
                                         </div>
 
                                     </div>
@@ -94,7 +94,7 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">address2</label>
                                         <div class="col-md-12">
-                                            <input type="text"  name="address2" class="form-control" value=<%=resultSet.getString("address2")%>>
+                                            <input type="text"  name="address2" class="form-control" value=<%=resultSet.getString("address2")%> required/>
                                         </div>
 
                                     </div>
@@ -102,28 +102,28 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">city</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="city" class="form-control" value=<%=resultSet.getString("city")%>>
+                                            <input type="text" name="city" class="form-control" value=<%=resultSet.getString("city")%> required />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">state</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="state" class="form-control" value=<%=resultSet.getString("state")%>>
+                                            <input type="text" name="state" class="form-control" value=<%=resultSet.getString("state")%> required />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">pincode</label>
                                         <div class="col-md-12">
-                                            <input type="number" name="pincode" class="form-control" value=<%=resultSet.getString("pincode")%> >
+                                            <input type="number" name="pincode" class="form-control" required value=<%=resultSet.getString("pincode")%>>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-md-12 control-label">country</label>
                                         <div class="col-md-12">
-                                            <input type="text" name="country" class="form-control" value=<%=resultSet.getString("country")%> >
+                                            <input type="text" name="country" class="form-control" value=<%=resultSet.getString("country")%> required />
                                         </div>
                                     </div>
 
